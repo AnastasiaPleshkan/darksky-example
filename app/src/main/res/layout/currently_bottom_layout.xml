@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="net.darksky.example.util.DateUtils" />
+
+        <import type="net.darksky.example.util.Converter" />
+        <variable
+            name="currently"
+            type="net.darksky.example.vo.DataDetail" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/precipitation" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ico_precipitation"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@{@string/prec_( Converter.round(currently.precipProbability) )}"
+                tools:text="0 mm" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@{@string/hum_( Converter.round(currently.humidity) )}"
+                tools:text="72%" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@{@string/wind_( Converter.round(currently.windSpeed) )}"
+                tools:text="NbE 1m/s" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:rotation="@{currently.windBearing}"
+                android:src="@drawable/ic_wind0"
+                tools:src="@drawable/ic_wind0" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium.Active"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{Converter.round(currently.windSpeed)}"
+                tools:text="1" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>
+

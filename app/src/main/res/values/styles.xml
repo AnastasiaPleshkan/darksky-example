@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Display1.Active" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Large.Active" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Medium.Active" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Small.Active" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Body1.Active" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+</resources>

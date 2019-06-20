@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:padding="@dimen/margin_default"
+        android:background="@color/lightBlue"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium.Active"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/time" />
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium.Active"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/temp"/>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium.Active"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/prec"/>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium.Active"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/hum"/>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium.Active"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/wind"/>
+    </LinearLayout>
+
+</layout>
+

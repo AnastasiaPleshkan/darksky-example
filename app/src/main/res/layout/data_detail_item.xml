@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="net.darksky.example.util.DateUtils" />
+
+        <import type="net.darksky.example.util.Converter" />
+        <variable
+            name="data"
+            type="net.darksky.example.vo.DataDetail" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:paddingLeft="@dimen/margin_default"
+            android:paddingRight="@dimen/margin_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small.Active"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:text="@{DateUtils.formatHourly(data.time)}"
+                tools:text="2 PM\n22 FEB" />
+
+            <ImageView
+                imageIcon="@{data.icon}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:src="@drawable/cloudy" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small.Active"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{@string/temp_( Converter.f2c(data.temp() ))}"
+                tools:text="22 \u2103" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small.Active"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ico_precipitation"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@{@string/prec_2( Converter.round(data.precipProbability) )}"
+                tools:text="0\nmm" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small.Active"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@{@string/hum_( Converter.round(data.humidity) )}"
+                tools:text="72%" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small.Active"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@{@string/wind_2( Converter.round(data.windSpeed) )}"
+                tools:text="NbE\n1m/s" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

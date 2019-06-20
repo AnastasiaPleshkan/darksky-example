@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="net.darksky.example.util.DateUtils" />
+
+        <import type="net.darksky.example.util.Converter" />
+
+        <import type="net.darksky.example.vo.Resource" />
+
+        <import type="net.darksky.example.vo.Status" />
+
+        <import type="net.darksky.example.vo.Forecast" />
+
+        <import type="net.darksky.example.ui.common.ClickCallback" />
+
+        <variable
+            name="resource"
+            type="Resource&lt;Forecast>" />
+
+        <variable
+            name="daily"
+            type="Boolean" />
+
+        <variable
+            name="currently"
+            type="net.darksky.example.vo.DataDetail" />
+
+        <variable
+            name="callback"
+            type="ClickCallback" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/loading_state"
+            app:callback="@{callback}"
+            app:resource="@{(Resource) resource}"
+            tools:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_default"
+            android:orientation="vertical"
+            app:visibleGone="@{((Resource)resource).status == Status.SUCCESS}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/weather"
+                    tools:text="Weather" />
+
+                <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                    android:id="@+id/btnSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:activeBgColor="@color/darkBlue"
+                    app:cornerRadius="3dp"
+                    app:inactiveBgColor="@color/lightBlue"
+                    app:textToggleLeft="@string/hourly"
+                    app:textToggleRight="@string/daily"
+                    app:toggleWidth="80dp" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/currently_top_layout"
+                app:currently="@{currently}" />
+
+            <include
+                layout="@layout/currently_bottom_layout"
+                app:currently="@{currently}" />
+
+            <include layout="@layout/header_recycler_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/data_detail_item" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

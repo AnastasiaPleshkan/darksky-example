@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Darksky</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="amount_hint">Enter amount</string>
+    <string name="animation">Animation</string>
+    <string name="hourly">Hourly</string>
+    <string name="daily">Daily</string>
+    <string name="weather">Weather</string>
+    <string name="temp_">%s \u2103</string>
+    <string name="prec_">%s mm</string>
+    <string name="prec_2">%s\nmm</string>
+    <string name="hum_">%s\%%</string>
+    <string name="wind_">NbE %sm/s</string>
+    <string name="wind_2">NbE\n%sm/s</string>
+    <string name="precipitation">PRECIPITATION</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="wind">WIND</string>
+    <string name="time">TIME</string>
+    <string name="temp">TEMP</string>
+    <string name="prec">PREC</string>
+    <string name="hum">HUM</string>
+    <string name="loading">Loading...</string>
+    <string name="searching_location">Searching location...\nCheck turned on gps</string>
+</resources>

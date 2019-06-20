@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/locationFragment">
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="net.darksky.example.ui.location.LocationFragment"
+        android:label="LocationFragment">
+        <action
+            android:id="@+id/show"
+            app:destination="@id/forecastFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/locationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="net.darksky.example.ui.forecast.ForecastFragment"
+        android:label="ForecastFragment">
+        <argument
+            android:name="lat"
+            app:argType="string" />
+        <argument
+            android:name="lon"
+            app:argType="string" />
+    </fragment>
+</navigation>
