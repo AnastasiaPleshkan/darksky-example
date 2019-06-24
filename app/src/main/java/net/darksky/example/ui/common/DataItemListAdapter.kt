@@ -1,5 +1,6 @@
 package net.darksky.example.ui.common
 
+import android.graphics.Color
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
@@ -53,5 +54,14 @@ class DataItemListAdapter(
 
     override fun bind(binding: DataDetailItemBinding, item: DataDetail) {
         binding.data = item
+    }
+
+    override fun onBindViewHolder(holder: DataBoundViewHolder<DataDetailItemBinding>, position: Int) {
+        if(position % 2 == 0) {
+            holder.binding.root.setBackgroundResource(R.color.colorPrimary)
+        }else{
+            holder.binding.root.setBackgroundResource(R.color.lightBlue)
+        }
+        super.onBindViewHolder(holder, position)
     }
 }

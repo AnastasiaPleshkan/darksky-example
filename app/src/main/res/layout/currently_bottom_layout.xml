@@ -4,6 +4,7 @@
 
     <data>
 
+        <import type="net.darksky.example.R" />
         <import type="net.darksky.example.util.DateUtils" />
 
         <import type="net.darksky.example.util.Converter" />
@@ -75,7 +76,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:text="@{@string/wind_( Converter.round(currently.windSpeed) )}"
+                windBearing="@{currently.windBearing}"
+                windSpeed="@{currently.windSpeed}"
+                stringResId="@{R.string.wind_}"
                 tools:text="NbE 1m/s" />
         </LinearLayout>
 
@@ -89,6 +92,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:rotation="@{currently.windBearing}"
+                tools:rotation="300"
                 android:src="@drawable/ic_wind0"
                 tools:src="@drawable/ic_wind0" />
 

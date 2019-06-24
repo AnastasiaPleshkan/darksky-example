@@ -11,8 +11,8 @@
     <string name="prec_">%s mm</string>
     <string name="prec_2">%s\nmm</string>
     <string name="hum_">%s\%%</string>
-    <string name="wind_">NbE %sm/s</string>
-    <string name="wind_2">NbE\n%sm/s</string>
+    <string name="wind_">%s %sm/s</string>
+    <string name="wind_2">%s\n%sm/s</string>
     <string name="precipitation">PRECIPITATION</string>
     <string name="humidity">HUMIDITY</string>
     <string name="wind">WIND</string>
@@ -22,4 +22,39 @@
     <string name="hum">HUM</string>
     <string name="loading">Loading...</string>
     <string name="searching_location">Searching location...\nCheck turned on gps</string>
+
+    <string name="weather_wind_direction_">No Data</string>
+    <string name="weather_wind_direction_n">N</string>
+    <string name="weather_wind_direction_nbe">NbE</string>
+    <string name="weather_wind_direction_nne">NNE</string>
+    <string name="weather_wind_direction_nebn">NEbN</string>
+    <string name="weather_wind_direction_ne">NE</string>
+    <string name="weather_wind_direction_nebe">NEbE</string>
+    <string name="weather_wind_direction_ene">ENE</string>
+    <string name="weather_wind_direction_ebn">EbN</string>
+    <string name="weather_wind_direction_e">E</string>
+    <string name="weather_wind_direction_ebs">EbS</string>
+    <string name="weather_wind_direction_ese">ESE</string>
+    <string name="weather_wind_direction_sebe">SEbE</string>
+    <string name="weather_wind_direction_se">SE</string>
+    <string name="weather_wind_direction_sebs">SEbS</string>
+    <string name="weather_wind_direction_sse">SSE</string>
+    <string name="weather_wind_direction_sbe">SbE</string>
+    <string name="weather_wind_direction_s">S</string>
+    <string name="weather_wind_direction_sbw">SbW</string>
+    <string name="weather_wind_direction_ssw">SSW</string>
+    <string name="weather_wind_direction_swbs">SWbS</string>
+    <string name="weather_wind_direction_sw">SW</string>
+    <string name="weather_wind_direction_swbw">SWbW</string>
+    <string name="weather_wind_direction_wsw">WSW</string>
+    <string name="weather_wind_direction_wbs">WbS</string>
+    <string name="weather_wind_direction_w">W</string>
+    <string name="weather_wind_direction_wbn">WbN</string>
+    <string name="weather_wind_direction_wnw">WNW</string>
+    <string name="weather_wind_direction_nwbw">NWbW</string>
+    <string name="weather_wind_direction_nw">NW</string>
+    <string name="weather_wind_direction_nwbn">NWbN</string>
+    <string name="weather_wind_direction_nnw">NNW</string>
+    <string name="weather_wind_direction_nbw">NbW</string>
+
 </resources>

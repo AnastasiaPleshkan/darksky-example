@@ -3,6 +3,6 @@
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#0f6880</color>
     <color name="colorAccent">@color/darkBlue</color>
-    <color name="lightBlue">#e9ffff</color>
-    <color name="darkBlue">#20acd5</color>
+    <color name="lightBlue">#f0fcff</color>
+    <color name="darkBlue">#1ba9d3</color>
 </resources>
